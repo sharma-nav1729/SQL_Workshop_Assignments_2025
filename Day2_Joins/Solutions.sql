@@ -1,0 +1,37 @@
+-- Question 1
+SELECT c.CUST_NAME, a.AGENT_NAME
+FROM Customers c
+JOIN Agents a ON c.AGENT_CODE = a.AGENT_CODE;
+
+-- Question 2
+SELECT c.CUST_NAME, a.WORKING_AREA
+FROM Customers c
+JOIN Agents a ON c.AGENT_CODE = a.AGENT_CODE;
+
+-- Question 3
+SELECT c.CUST_NAME, c.AGENT_CODE
+FROM Customers c
+INNER JOIN Agents a ON c.AGENT_CODE = a.AGENT_CODE;
+
+-- Question 4
+SELECT a.AGENT_NAME, c.CUST_NAME
+FROM Agents a
+LEFT JOIN Customers c ON a.AGENT_CODE = c.AGENT_CODE;
+
+-- Question 5
+SELECT c.CUST_NAME, a.AGENT_NAME
+FROM Customers c
+RIGHT JOIN Agents a ON c.AGENT_CODE = a.AGENT_CODE;
+
+-- Question 6
+SELECT * FROM Customers
+WHERE RECEIVE_AMT > PAYMENT_AMT;
+
+-- Question 7
+SELECT c.CUST_NAME, a.AGENT_NAME
+FROM Customers c
+JOIN Agents a ON c.CUST_CITY = a.WORKING_AREA;
+
+-- Question 8
+SELECT * FROM Customers
+WHERE OUTSTANDING_AMT = 0 AND GRADE IS NOT NULL;

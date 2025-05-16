@@ -1,0 +1,21 @@
+-- Day1_Basics/schema.sql
+
+CREATE TABLE Sales (
+	    SaleID INT PRIMARY KEY,
+	    ProductID INT,
+	    Category VARCHAR(50),
+	    SaleDate DATE,
+	    SaleAmount DECIMAL(10, 2)
+);
+
+CREATE TABLE Customers (
+	    CUST_CODE VARCHAR(10) PRIMARY KEY,
+	    CUST_NAME VARCHAR(50),
+	    CUST_CITY VARCHAR(50),
+	    GRADE INT,
+	    OPENING_AMT DECIMAL(10, 2),
+	    RECEIVE_AMT DECIMAL(10, 2),
+	    PAYMENT_AMT DECIMAL(10, 2),
+	    OUTSTANDING_AMT DECIMAL(10, 2),
+	    AGENT_CODE VARCHAR(10)
+);

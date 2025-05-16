@@ -1,0 +1,43 @@
+-- Question 1
+SELECT CUST_CITY, COUNT(*) AS Total_Customers
+FROM Customers
+GROUP BY CUST_CITY;
+
+-- Question 2
+SELECT GRADE, AVG(PAYMENT_AMT) AS Avg_Payment
+FROM Customers
+GROUP BY GRADE;
+
+-- Question 3
+SELECT AGENT_CODE, MAX(OPENING_AMT) AS Max_Opening
+FROM Customers
+GROUP BY AGENT_CODE;
+
+-- Question 4
+SELECT CUST_CITY, SUM(RECEIVE_AMT) AS Total_Receive, AVG(OUTSTANDING_AMT) AS Avg_Outstanding
+FROM Customers
+GROUP BY CUST_CITY;
+
+-- Question 5
+SELECT AGENT_CODE, COUNT(*) AS Customer_Count
+FROM Customers
+GROUP BY AGENT_CODE;
+
+-- Question 6
+SELECT CUST_CITY
+FROM Customers
+GROUP BY CUST_CITY
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+-- Question 7
+SELECT GRADE, SUM(PAYMENT_AMT) AS Total_Payment
+FROM Customers
+WHERE GRADE > 1
+GROUP BY GRADE;
+
+-- Question 8
+SELECT CUST_CITY
+FROM Customers
+GROUP BY CUST_CITY
+HAVING COUNT(*) > 2;
